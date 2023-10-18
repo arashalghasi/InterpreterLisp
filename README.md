@@ -8,7 +8,6 @@ If you find this repository useful, please consider giving it a ⭐ star. Your s
 ## Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
 - [Installing](#installing)
 - [Usage](#usage)
 
