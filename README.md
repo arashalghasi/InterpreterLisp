@@ -8,6 +8,8 @@ If you find this repository useful, please consider giving it a ⭐ star. Your s
 ## Table of Contents
 
 - [About](#about)
+- [Grammer](#grammer)
+- [UML](#uml)
 - [Installing](#installing)
 - [Usage](#usage)
 
@@ -27,6 +29,39 @@ If you find this repository useful, please consider giving it a ⭐ star. Your s
 - `Purpose`: Semantic analysis goes beyond syntax to check the meaning and correctness of the code. It enforces semantic rules, such as variable type compatibility, scope resolution, and adherence to language-specific constraints.  
 
 - `Function`: The semantic analysis phase ensures that variables are declared before use, types are consistent, and function calls are valid. It helps identify and prevent common programming errors, ensuring that the code is semantically correct. If any semantic errors are found, the interpreter may issue error messages to guide the user in fixing the issues.
+
+## Grammer
+
+> program -> stmt_block  
+> stmt_block -> stmtement | (BLOCK statement)  
+> statement_list -> statement statement_list | statement  
+>> statement -> variable | io_stmt | cond_stmt | loop_stmt  
+
+> variable -> (SET variable_id num_expr)
+> io_stmt -> (PRINT num_expr) | (INPUT variable_id)
+> Cond_stmt -> (IF bool_expr stmt_expr stmt_expr)
+> loop_stmt -> (WHILE bool_expr stmt_block)
+
+> variable_id -> alpha_list
+> alpah_list -> alpha alpha_list | alpha
+> alpha -> a | b | c | ... | z | A | B | C | ... | Z
+
+> number -> -posnumber | posnumber
+> posnumber -> 0 | sigdigit rest
+> 1 | ... | 9
+> rest -> digit rest | vouto
+> digit -> 0 | sigdigit
+ 
+> num_expr -> (ADD num_expr num_expr)  | (SUB num_expr num_expr)  | (MUL num_expr num_expr)  | (DIV num_expr num_expr) | number | variable_id
+
+> bool_expr -> (LT num_expr num_expr) | (GT num_expr num_expr) | (EQ num_expr num_expr) | (AND bool_expr bool_expr) | (OR bool_expr bool_expr) | (NOT bool_expr) | TRUE | FALSE
+
+
+## UML
+
+![UML](UML.svg)
+
+
 ## Installing
 To install the Lisp-like language interpreter, follow these steps:  
 1. Download the Source Code.
