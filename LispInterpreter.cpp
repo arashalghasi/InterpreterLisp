@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "Expression.h"
-//#include "Expression.cpp"
+#include "Expression.cpp"
 #include "Token.h"
 #include "Tokenizer.h"
 #include "Exceptions.h"
