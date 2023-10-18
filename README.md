@@ -34,7 +34,7 @@ To install the Lisp-like language interpreter, follow these steps:
 2. Compile the Main File:  	
 	Using a C++ compiler like `g++`, navigate to the directory where you've stored the source code. Run the following command to compile the main file, named *LispInterpreter.cpp*:
 
-```
+```console
 g++ LispInterpreter.cpp -o LispInterpreter
 ```
 
